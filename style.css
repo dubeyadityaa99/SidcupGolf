@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#cursor {
+  height: 25px;
+  width: 25px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+}
+#cursor-blur {
+  height: 300px;
+  width: 300px;
+  background-color: #99cd3265;
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(50px);
+  z-index: 9;
+}
+#nav {
+  height: 145px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  padding: 0 150px;
+  gap: 50px;
+  position: fixed;
+  justify-content: flex-start;
+  z-index: 99;
+}
+#nav img {
+  height: 75px;
+}
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.37);
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+}
+#page1 h1 {
+  font-size: 140px;
+  font-weight: 900;
+  position: relative;
+}
+#page1 h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#page1 p {
+  font-size: 20px;
+  font-weight: 500;
+  width: 40%;
+}
+#page1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: black;
+  top: -2px;
+  left: -3px;
+  -webkit-text-stroke: 2px greenyellow;
+  z-index: -1;
+}
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+#scroller {
+  /* background-color: aqua; */
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar {
+  display: none;
+}
+#scroller-1 {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 45s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+  display: inline-block;
+  font-size: 80px;
+  font-weight: 900;
+  font-family: gilroy;
+  margin-right: 10px;
+  transition: all linear 0.5s;
+  -webkit-text-stroke: 2px greenyellow;
+  color: transparent;
+}
+#scroller h4:hover {
+  color: pink;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#about-us {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.abimg {
+  height: 35vh;
+  width: 35vh;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+#about-us-in {
+  width: 50%;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 50px; */
+}
+
+#about-us-in h3 {
+  font-size: 55px;
+  font-weight: 600;
+}
+#about-us-in p {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.options {
+  /* background-color: aqua; */
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+  margin-top: 10vh;
+  position: relative;
+  z-index: 10;
+}
+.sub-options {
+  background-color: yellowgreen;
+  height: 40vh;
+  width: 40vh;
+  border-radius: 5%;
+  padding: 25px 0 0 20px;
+  position: relative;
+}
+.sub-options h4 {
+  font-size: 25px;
+  color: black;
+}
+.sub-options p {
+  color: black;
+  padding-top: 25px;
+  width: 90%;
+}
+/* #op1 {
+  background-image: url(https://sidcup-golf-family.netlify.app/Assests/card1.avif);
+  object-fit: contain;
+} */
+/* #op1 img {
+  position: absolute;
+
+  height: 40vh;
+  width: 40vh;
+} */
+/* #op3 {
+  position: relative;
+} */
+/* #op3 img {
+  position: absolute;
+
+  height: 40vh;
+  width: 40vh;
+} */
+.sub-options img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 5%;
+  height: 40vh;
+  width: 40vh;
+}
+.sub-options img:hover {
+  opacity: 0;
+  transition: 1s;
+}
+
+.greenstrip {
+  height: 25vh;
+  width: 100%;
+  text-align: center;
+  line-height: 6vh;
+  padding-top: 7vh;
+  position: relative;
+  z-index: 10;
+  margin-top: 6vh;
+  background: linear-gradient(to bottom left, #119f3a, #ace022);
+}
+.greenstrip h4 {
+  color: black;
+  font-size: 1.5em;
+}
